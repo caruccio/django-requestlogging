@@ -88,7 +88,7 @@ class RequestFilter(object):
         user = getattr(request, 'user', None)
         if user and not user.is_anonymous():
             record.username = user.username
-            record.username = user.email
+            record.email    = user.email
         else:
             record.username = '-'
             record.email    = '-'
